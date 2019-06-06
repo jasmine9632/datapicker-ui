@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dataPicker</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    input {
+        display: inline-block;
+        border: 1px solid #757272;
+        font-size: 16px;
+        padding: 8px 30px;
+        margin: 20px;
+        border-radius: 6px;
+        outline: none;
+        vertical-align: middle;
+    }
+    
+    input:focus {
+        border: 1px solid green;
+    }
+    
+    .fa-calendar {
+        margin-right: -45px;
+        opacity: 0.5;
+        vertical-align: middle;
+    }
+    
+    .box1,
+    .box2 {
+        padding: 40px;
+        margin: 20px;
+    }
+    
+    input:disabled {
+        cursor: not-allowed;
+        color: rgba(187, 187, 187, 187);
+        background: #fff;
+        border-color: rgba(187, 187, 187, 187);
+    }
+    
+    .box-wrapper {
+        border: 1px solid red;
+        display: inline-block;
+    }
+    
+    .input1 {
+        border: 1px solid green;
+        padding-right: 40px;
+    }
+</style>
+
+<body>
+    <div>
+        <div class="box1">
+            <h3>基础用法</h3>
+            <div class="box-wrapper">
+                <i class="fa fa-calendar"></i>
+                <input type="text" placeholder="请选择日期" class="input input1" id="datepicker">
+            </div>
+        </div>
+        <div class="box2">
+            <h3>禁用状态</h3>
+            <i class="fa fa-calendar"></i>
+            <input type="text" placeholder="data" disabled="disabled">
+        </div>
+    </div>
+
+</body>
+<script>
+    $(function() {
+        $("#datepicker ").datepicker();
+    })
+</script>
+
+</html>
